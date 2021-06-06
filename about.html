@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/global.css">
     <link rel="stylesheet" href="./styles/about.css" />
     <meta
       name="description"
@@ -45,7 +46,7 @@
   <body>
     <header>
       <div class="logo-container">
-        <a href="index.html"><h1 id="logo">Travezy</h1></a>
+        <a id="logo" href="index.html">Travezy</a>
       </div>
 
       <label class="hamburger-label" for="hamburger-menu"><i class="fas fa-bars"></i></label>
@@ -88,7 +89,7 @@
 
     <main>
       <div class="title-container">
-        <h2>About us</h2>
+        <h1>About us</h1>
         <hr />
       </div>
 
@@ -112,16 +113,24 @@
     <footer>
       <div class="footer-container">
         <div class="news">
-          <h5>Sign up to our newletter</h5>
+          <h3>Sign up to our newletter</h3>
           <p class="footertxt">Stay updated</p>
-          <div class="input">
-            <input class="emailinput" type="email" placeholder="Type email" />
-            <a class="email-btn"><i class="fas fa-chevron-right"></i></a>
+          <form action="" class="formContainer">
+            <label class="elabel">
+              Email (Required)
+                </label>
+                <div class="form-error" id="emailError">
+            Please enter a valid email address
           </div>
+          <div class="input">
+            <input class="emailinput" type="text" id="email" type="email" placeholder="Type email" />
+            <button type="sumbit" value="send" class="email-btn"><i class="fas fa-chevron-right"></i></button>
+          </div>
+          </form>
         </div>
 
         <div class="footer-social">
-          <h5>Follow us</h5>
+          <h3>Follow us</h3>
           <p class="footertxt">On social media</p>
           <div class="footer-icon">
             <a><i class="fab fa-facebook"></i></a>
@@ -138,6 +147,7 @@
       <p class="copy">&#169 Copyright 2021 All rights reserved | Made by Eirik Lilleby</p>
     </footer>
 
-    <script src="./js/contact.js"></script>
+  
+    <script src="./js/newsletter.js"></script>
   </body>
 </html>

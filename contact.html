@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/global.css">
     <link rel="stylesheet" href="./styles/contact.css" />
     <meta name="description" content="Travezy blog, contact us and send us a message with our contact form!" />
     <!-- Font from Google font -->
@@ -41,7 +42,7 @@
   <body>
     <header>
       <div class="logo-container">
-        <a href="index.html"><h1 id="logo">Travezy</h1></a>
+         <a id="logo" href="index.html">Travezy</a>
       </div>
 
       <label class="hamburger-label" for="hamburger-menu"><i class="fas fa-bars"></i></label>
@@ -84,13 +85,13 @@
 
     <main>
       <div class="title-container">
-        <h2>Contact us</h2>
+        <h1>Contact us</h1>
         <hr />
       </div>
 
       <form action="" class="formContainer">
         <div>
-          <label>
+          <label class="contactlabel">
             Name (Required: minimum 5 characters)
             <input class="inputform" name="firstName" id="firstName" />
           </label>
@@ -100,15 +101,15 @@
         </div>
 
         <div>
-          <label>
+          <label class="contactlabel">
             Email (Required)
             <input class="inputform" name="email" id="email" />
           </label>
-          <div class="form-error" id="emailError">Please enter a valid email adress</div>
+          <div class="form-error" id="emailError">Please enter a valid email address</div>
         </div>
 
         <div>
-          <label>
+          <label  class="contactlabel">
             Subject (Required: minimum 15 characters)
             <input class="inputform" name="subject" id="subject" />
           </label>
@@ -116,28 +117,39 @@
         </div>
 
         <div class="msg-box">
+          <label class="contactlabel">
           Message (Required: minimum 25 characters)
-          <textarea name="message" id="message"></textarea>
+          <textarea name="message" id="message">
+          </textarea>
+          </label>
           <div class="form-error" id="messageError">Your message must be a least 25 characters</div>
         </div>
 
-        <button type="submit" value="send">Submit</button>
+        <button class="formbtn" type="submit" value="send">Submit</button>
       </form>
     </main>
 
     <footer>
       <div class="footer-container">
         <div class="news">
-          <h5>Sign up to our newletter</h5>
+          <h3>Sign up to our newletter</h3>
           <p class="footertxt">Stay updated</p>
-          <div class="input">
-            <input class="emailinput" type="email" placeholder="Type email" />
-            <a class="email-btn"><i class="fas fa-chevron-right"></i></a>
+          <form action="" class="containerForm">
+            <label class="elabel" for="email" for="email">
+              Email (Required)
+                </label>
+                <div class="form-error" id="emailError">
+            Please enter a valid email address
           </div>
+          <div class="input">
+            <input class="emailinput" type="text" id="email" type="email" placeholder="Type email" />
+            <button type="sumbit" value="send" class="email-btn"><i class="fas fa-chevron-right"></i></button>
+          </div>
+          </form>
         </div>
 
         <div class="footer-social">
-          <h5>Follow us</h5>
+          <h3>Follow us</h3>
           <p class="footertxt">On social media</p>
           <div class="footer-icon">
             <a><i class="fab fa-facebook"></i></a>
@@ -157,5 +169,6 @@
     </footer>
 
     <script src="./js/contact.js"></script>
+    <script src="./js/newsletter.js"></script>
   </body>
 </html>

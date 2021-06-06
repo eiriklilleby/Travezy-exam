@@ -14,7 +14,7 @@ async function makeApiCall() {
 
     detailContainer.innerHTML = `
   <div class="title-container">
-      <h2>${json.title.rendered}</h2>
+      <h1>${json.title.rendered}</h1>
         <div class="info-container">
           <div class="info posted">
             <i class="fas fa-user-alt"></i>

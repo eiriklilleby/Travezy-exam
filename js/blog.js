@@ -32,7 +32,7 @@ async function makeApiCall() {
             </div>
           </div>
           <div class="blog-container">
-            <h3>${json[i].title.rendered}</h3>
+            <h2>${json[i].title.rendered}</h2>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi quaerat officiis cumque aspernatur unde
               debitis enim eveniet placeat tempora. Harum dolore, recusandae odio culpa nobis ullam minus necessitatibus
