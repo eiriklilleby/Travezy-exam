@@ -6,6 +6,25 @@ const nextBtn = document.querySelector("#next-btn");
 let length = 3;
 let offset = 0;
 
+// Tried to make the coursel only display one at smaller screen. Couldn't make it work at this time. Didn't have enough time to figure it out.
+
+// const mediaQuery = window.matchMedia("(max-width: 768px)");
+
+// function handleTabletChange(e) {
+//   // Check if the media query is true
+//   if (e.matches) {
+//     length = 1;
+//   } else {
+//     length = 3;
+//   }
+// }
+
+// // Register event listener
+// mediaQuery.addListener(handleTabletChange);
+
+// // Initial check
+// handleTabletChange(mediaQuery);
+
 async function makeApiCall() {
   try {
     const response = await fetch(url + `?per_page=${length}&offset=${offset}&_embed`);
@@ -23,8 +42,6 @@ async function makeApiCall() {
     } else {
       nextBtn.style.display = "block";
     }
-
-    console.log(json);
 
     postContainer.innerHTML = "";
 
@@ -58,7 +75,7 @@ async function makeApiCall() {
   }
 }
 
-// Addventlistener for generating more post on click
+// Addeventlistener for generating more post on click
 
 prevBtn.addEventListener("click", () => {
   if (offset >= 3) {
